@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Práctica CR | Contacto</title>
+  </head>
+  <body>
+    <header>
+      <h1>Gonzalo</h1>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="./about.html">Sobre mí</a></li>
+          <li><a href="./contact.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h2>Contacto</h2>
+      <address>
+        <p>email: gonsevi80@gmail.com</p>
+        <p>teléfono:636780318</p>
+      </address>
+
+      <!-- 1. Formulario con 2 inputs (Nombre y Email) y un textarea con sus labels -->
+      <form>
+        <!-- 6. Agrupamos los campos dentro del fieldset "Datos de Contacto" -->
+        <fieldset>
+          <!-- 6.1. Añadimos un legend para etiquetar el grupo de campos -->
+          <legend>Datos de Contacto</legend>
+          <ul>
+            <li>
+              <label for="name">Nombre:</label>
+
+              <!-- 3. Añadimos atributo name para enviar el valor del campo con el formulario -->
+              <input type="text" id="name" name="name" />
+            </li>
+            <li>
+              <label for="email">Email:</label>
+              <!-- 5. Añadimos atributo autocomplete="off" en el campo email -->
+              <input type="email" id="email" name="email" autocomplete="off" />
+            </li>
+            <li>
+              <label for="comments">Comentario:</label>
+              <!-- 4. Añadimos atributo placeholder en el campo textarea -->
+              <textarea
+                cols="21"
+                rows="4"
+                name="comments"
+                minlength="3"
+                maxlength="50"
+                id="comments"
+                placeholder="Escribe aquí (Caracteres min. 3 máx. 50)"
+              ></textarea>
+            </li>
+          </ul>
+        </fieldset>
+
+        <!-- 7. Nuevo Fieldset llamado "Otros datos de interés" -->
+        <fieldset>
+          <!-- 7.1. Etiquetamos el nuevo grupo de campos -->
+          <legend>Otros datos de interés</legend>
+
+          <!-- 8. Dentro de un ul, creamos ítems con los nuevos campos y sus especificaciones -->
+          <ul>
+            <li>
+              <label for="mobile">Teléfono:</label>
+              <input type="tel" id="mobile" name="mobile" />
+            </li>
+            <li>
+              <label for="favNumber">Numero favorito:</label>
+              <input
+                type="number"
+                id="favNumber"
+                name="favNumber"
+                min="1"
+                max="20"
+              />
+            </li>
+            <li>
+              <label for="Color">Color favorito:</label>
+              <input type="color" id="color" name="color" />
+            </li>
+            <li>
+              <label for="birthdate">Fecha nacimiento:</label>
+              <input type="date" id="birthdate" name="birthdate" />
+            </li>
+            <li>
+              <label for="password">Contraseña:</label>
+              <input type="password" id="password" name="password" />
+            </li>
+
+            <!-- 9. Ítem con checkbox para aceptar los términos y condiciones-->
+            <li>
+              <label for="conditions">
+                Aceptas todos los terminos y condiciones sin leerlos?
+              </label>
+              <input
+                type="checkbox"
+                id="conditions"
+                name="termsConditions"
+                value="Acepto"
+                checked
+              />
+            </li>
+
+            <!-- 10. Insertamos campo de radio para ser amigo? sí o no, por defecto sí -->
+            <li>
+              <p>¿Quieres ser mi amig@?</p>
+              <label for="amigoSi"> Sí </label>
+              <input
+                type="radio"
+                name="newfriend"
+                id="amigoSi"
+                value="si"
+                checked
+              />
+              <label for="amigoNo"> No </label>
+              <input type="radio" name="newfriend" id="amigoNo" value="no" />
+            </li>
+
+            <!-- 11. Ítem con un campo select para comida favorita, opción 2 por defecto -->
+            <li>
+              <label for="favFood">Comida favorita: </label>
+              <select id="favFood" name="favFood">
+                <option value="puchero">Puchero</option>
+                <option value="carne a la brasa" selected>
+                  Carne a la brasa
+                </option>
+                <option value="hamburguesa">Hamburguesas</option>
+                <option value="pisto">Pisto</option>
+              </select>
+            </li>
+          </ul>
+        </fieldset>
+
+        <!-- 2. Botón de reset y de envío de formulario -->
+        <button type="reset">Limpiar</button>
+        <button type="submit">Enviar</button>
+      </form>
+    </main>
+    <footer>
+      <p>© Gonzalo Bulnes - 2023</p>
+    </footer>
+  </body>
+</html>
