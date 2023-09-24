@@ -24,27 +24,23 @@
         <p>teléfono:636780318</p>
       </address>
 
-      <!-- 1. Formulario con 2 inputs (Nombre y Email) y un textarea con sus labels -->
       <form>
-        <!-- 6. Agrupamos los campos dentro del fieldset "Datos de Contacto" -->
         <fieldset>
-          <!-- 6.1. Añadimos un legend para etiquetar el grupo de campos -->
           <legend>Datos de Contacto</legend>
           <ul>
             <li>
               <label for="name">Nombre:</label>
 
-              <!-- 3. Añadimos atributo name para enviar el valor del campo con el formulario -->
               <input type="text" id="name" name="name" />
             </li>
             <li>
               <label for="email">Email:</label>
-              <!-- 5. Añadimos atributo autocomplete="off" en el campo email -->
+
               <input type="email" id="email" name="email" autocomplete="off" />
             </li>
             <li>
               <label for="comments">Comentario:</label>
-              <!-- 4. Añadimos atributo placeholder en el campo textarea -->
+
               <textarea
                 cols="21"
                 rows="4"
@@ -58,12 +54,9 @@
           </ul>
         </fieldset>
 
-        <!-- 7. Nuevo Fieldset llamado "Otros datos de interés" -->
         <fieldset>
-          <!-- 7.1. Etiquetamos el nuevo grupo de campos -->
           <legend>Otros datos de interés</legend>
 
-          <!-- 8. Dentro de un ul, creamos ítems con los nuevos campos y sus especificaciones -->
           <ul>
             <li>
               <label for="mobile">Teléfono:</label>
@@ -79,7 +72,7 @@
                 max="20"
               />
             </li>
-            <li>
+            <li class="one-line">
               <label for="Color">Color favorito:</label>
               <input type="color" id="color" name="color" />
             </li>
@@ -92,8 +85,7 @@
               <input type="password" id="password" name="password" />
             </li>
 
-            <!-- 9. Ítem con checkbox para aceptar los términos y condiciones-->
-            <li>
+            <li class="one-line">
               <label for="conditions">
                 Aceptas todos los terminos y condiciones sin leerlos?
               </label>
@@ -106,8 +98,7 @@
               />
             </li>
 
-            <!-- 10. Insertamos campo de radio para ser amigo? sí o no, por defecto sí -->
-            <li>
+            <li class="one-line">
               <p>¿Quieres ser mi amig@?</p>
               <label for="amigoSi"> Sí </label>
               <input
@@ -121,7 +112,6 @@
               <input type="radio" name="newfriend" id="amigoNo" value="no" />
             </li>
 
-            <!-- 11. Ítem con un campo select para comida favorita, opción 2 por defecto -->
             <li>
               <label for="favFood">Comida favorita: </label>
               <select id="favFood" name="favFood">
@@ -136,9 +126,10 @@
           </ul>
         </fieldset>
 
-        <!-- 2. Botón de reset y de envío de formulario -->
-        <button type="reset">Limpiar</button>
-        <button type="submit">Enviar</button>
+        <menu class="buttons">
+          <li><button type="reset">Limpiar</button></li>
+          <li><button type="submit">Enviar</button></li>
+        </menu>
       </form>
     </main>
     <footer>
